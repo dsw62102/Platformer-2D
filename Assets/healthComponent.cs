@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements.Experimental;
 
 public class healthComponent : MonoBehaviour
@@ -42,6 +43,7 @@ public class healthComponent : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("EndGame");
         }
     }
 
